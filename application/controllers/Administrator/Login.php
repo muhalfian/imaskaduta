@@ -8,7 +8,7 @@ class Login extends CI_Controller {
         $this->load->database();
         $this->load->helper('form');
         $this->load->model('Administrator/User_model');
-        $this->load->library('session');
+        $this->load->library('session'); 
     }
 
     function index() {
@@ -20,7 +20,7 @@ class Login extends CI_Controller {
         $this->session->unset_userdata('logged_in');
         $this->session->sess_destroy();
         redirect('Administrator/Login');
-    } 
+    }
 
     function CekLogin() {
         $data = array(
